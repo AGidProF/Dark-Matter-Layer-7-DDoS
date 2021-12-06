@@ -11,7 +11,7 @@ print("System detected: ", sysOS)
 
 if sysOS == "Linux":
   try:
-    os.system("ulimit -n 1030000")
+    os.system("ulimit -n 9999999999")
   except Exception as e:
     print(e)
     print("Could not start the script")
@@ -54,7 +54,7 @@ def send2attack():
     mp = multiprocessing.Process(target=attack)
     mp.setDaemon = False
     mp.start() #Magic Starts
-    print("Attacked")
+    print("Attacking on |>>> {ip} and {port} [ URL: {ulr} ] <<|")
 
     
 send2attack()
